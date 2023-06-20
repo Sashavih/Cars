@@ -1,0 +1,58 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "name": "Toyota Camry",
+            "price": 24970,
+            "image": "https://www.ixbt.com/img/n1/news/2023/3/3/141bfe0175e37845fcf4df032cd48694b3ffb5f2%20copy_large.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Honda Civic",
+            "price": 22545,
+            "image": "https://cdn.motor1.com/images/mgl/MQWXX/s1/2020-honda-civic-si-coupe.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Ford Mustang",
+            "price": 28840,
+            "image": "https://autopremiumgroup.ru/m/_versions/catalog/autos/2021/ford_mustang_2021_kupe/gt_premium_fastback/2021_mustang__gt_premium_fastback_sb_1_image_series.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Chevrolet Corvette",
+            "price": 62195,
+            "image": "https://www.ixbt.com/img/n1/news/2023/0/3/photo_2023-01-18_07-37-55_large.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Tesla Model S",
+            "price": 79990,
+            "image": "https://unicommotors.com/wp-content/uploads/2022/04/model-s2.jpg"
+        },
+        {
+            "id": 6,
+            "name": "BMW 3 Series",
+            "price": 43700,
+            "image": "https://carwow-uk-wp-3.imgix.net/P90462492_highRes_the-new-bmw-3-series-scaled-e1668530064634.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Audi A4",
+            "price": 40145,
+            "image": "https://audi-rus.ru/img/news/audi-a4-new-2019-6.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Mercedes-Benz C-Class",
+            "price": 43600,
+            "image": "https://kolesa-uploads.ru/-/014fd85f-2941-416d-b125-ad45299042bc/mercedes-benz-c-class-front2.jpg"
+        },
+        {
+            "name": "McLaren",
+            "price": 300000,
+            "image": "https://motor.ru/imgs/2023/04/26/10/5885490/5da7a758399e13dd2104ffe879838fd37d3c6a00.jpg",
+            "id": 9
+        }
+    ]
+}
