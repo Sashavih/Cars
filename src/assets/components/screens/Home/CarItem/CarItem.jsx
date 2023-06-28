@@ -1,21 +1,22 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CarItem.module.scss';
+import Price from './Price';
 
 export const CarItem = ({ car }) => {
+    const [count, setCount] = useState(0);
     return (
         <div className={styles.item}>
             <div className={styles.info}>
                 <h2>{car.name}</h2>
-                <p>{new Intl.NumberFormat('ru-RU', {
-                    style: 'currency',
-                    currency: 'USD',
-                }).format(car.price)}</p>
+                <Price price={car.price} />
             </div>
             <div
                 style={{
                     backgroundImage: `url(${car.image})`,
                 }}
                 className={styles.img} />
-            <button className='btn'>Read More</button>
+            <Link to={`/car/${car.id}`} className='btn'>Read More</Link>
         </div>
     )
 }
