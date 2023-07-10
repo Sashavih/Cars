@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './CarItem.module.scss';
 import Price from './Price';
+import { ICar } from '../../../../types/car.interface';
 
-export const CarItem = ({ car }) => {
+export const CarItem = ({ car }: { car: ICar }) => {
     const [count, setCount] = useState(0);
     return (
         <div className={styles.item}>

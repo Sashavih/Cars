@@ -1,5 +1,9 @@
-import styles from './CarForm.module.scss';
 import { useForm } from 'react-hook-form';
+import { ICarData } from '../../../../types/car.interface.js';
+import styles from './CarForm.module.scss';
+import ErrorMessage from './ErrorMessage';
+import { useCreateCar } from './useCreateCar';
+
 
 const CarForm = () => {
 
@@ -8,26 +12,14 @@ const CarForm = () => {
         reset,
         handleSubmit,
         formState: { errors },
-    } = useForm({
+    } = useForm<ICarData>({
         mode: 'onChange',
     });
-    console.log(errors);
 
-    const createCar = (data) => {
-
-        //setCars(prev => [{ id: prev.length + 1, ...data }, ...prev,]);
-        reset();
-    }
-
+    const { createCar } = useCreateCar(reset);
     return (
         <form className={styles.form} onSubmit={handleSubmit(createCar)}>
-            {errors?.name?.message && (
-                <p className={styles.error}>Name is required!</p>
-            )}
-            {errors?.price?.message && (
-                <p className={styles.error}>Price is required!</p>
-            )}
-
+            <ErrorMessage error={errors?.name?.message} />
             <input
                 {...register('name', { required: 'name is required!' })}
                 placeholder='Name' />

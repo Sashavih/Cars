@@ -1,13 +1,14 @@
 import { useNavigate, useParams } from "react-router";
-import { CarService } from '../../../services/car.services.js';
+import { CarService } from '../../../services/car.services';
 import { useState, useEffect } from "react";
 import { CarItem } from "../home/CarItem/CarItem";
 import { Link } from "react-router-dom";
+import { ICar } from "../../../types/car.interface";
 
 
 const CarDetails = () => {
     const { id } = useParams();
-    const [car, setCar] = useState();
+    const [car, setCar] = useState<ICar>({} as ICar);
 
     useEffect(() => {
         if (!id) return;
